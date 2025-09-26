@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react'; // ✅ 1. Importa o useState
+import { useRef, useState } from 'react'; 
 import toast from 'react-hot-toast';
 import QRCode from 'react-qr-code';
 import jsPDF from 'jspdf';
@@ -8,14 +8,14 @@ import {
     CheckCircleIcon, 
     ArrowDownTrayIcon, 
     AcademicCapIcon,
-    TicketIcon // ✅ 2. Adiciona o TicketIcon
+    TicketIcon 
 } from '@heroicons/react/24/outline';
 import { Modal } from '@/components/ui/Modal';
 import { ActionButton } from '@/components/ui/ActionButton';
 
-const APP_BASE_URL = "https://ticketfy.onrender.com";
+const APP_BASE_URL = "https://ticketfy.app/";
 
-// Componente para um botão de aba, para evitar repetição de código
+
 const TabButton = ({ isActive, onClick, icon: Icon, children }) => (
     <button
         onClick={onClick}
@@ -33,7 +33,7 @@ const TabButton = ({ isActive, onClick, icon: Icon, children }) => (
 
 export const TicketSuccessModal = ({ isOpen, onClose, ticketData }) => {
     const qrCodeContainerRef = useRef(null);
-    // ✅ 3. Estado para controlar a aba ativa
+    
     const [activeTab, setActiveTab] = useState('ticket'); 
 
     if (!isOpen || !ticketData) {
