@@ -13,7 +13,7 @@ import {
 import { Modal } from '@/components/ui/Modal';
 import { ActionButton } from '@/components/ui/ActionButton';
 
-const APP_BASE_URL = "https://ticketfy.app/";
+const APP_BASE_URL = "https://ticketfy.app";
 
 
 const TabButton = ({ isActive, onClick, icon: Icon, children }) => (
@@ -183,7 +183,7 @@ export const TicketSuccessModal = ({ isOpen, onClose, ticketData }) => {
             
             doc.setFont('helvetica', 'bold');
             doc.setTextColor(PRIMARY_COLOR);
-            doc.text('www.ticketfy.com', PAGE_WIDTH - MARGIN, footerY + 2, { align: 'right' });
+            doc.text('www.ticketfy.app', PAGE_WIDTH - MARGIN, footerY + 2, { align: 'right' });
 
             doc.save(`ingresso-ticketfy-${mintAddress.slice(0, 6)}.pdf`);
             
@@ -278,4 +278,5 @@ export const TicketSuccessModal = ({ isOpen, onClose, ticketData }) => {
             </div>
         </Modal>
     );
+
 };
